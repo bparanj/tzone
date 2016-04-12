@@ -1,0 +1,17 @@
+<h1> Registration </h1> 
+
+<%= form_for :user, :url => users_path do |f| %>
+  <p>
+    <%= f.label :email %><br/>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br/>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :time_zone %><br />
+    <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones %>
+  </p>
+  <p><%= f.submit "Sign up" %></p>
+<% end %>
